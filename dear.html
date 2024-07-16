@@ -1,0 +1,385 @@
+<!DOCTYPE lang="en-US">
+<html>
+    <head>
+        <meta charset="UTF_8">
+        <title>GYPSY.com</title>
+        <style>
+            body{
+              background-color:burlywood;
+            }
+            .psyc{
+                border: 8px solid azure ;
+                border-radius: 30px;
+                font-size:larger;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                text-align: center;
+                margin-top: 2%;
+                margin-left: 7%;
+                margin-right: 7%;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                border: 1px solid white;
+                background-color: rgb(223, 69, 13);
+                margin-left: 1.5%;
+                margin-right: 1.5%;
+                position: sticky;
+                top: 0;
+            }
+            li{
+                float: left;
+            }
+            li a, .dropbtn {
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            li a:hover, .dropdown:hover .dropbtn {
+                background-color: rgb(190, 40, 40);
+            }
+            li.dropdown {
+                display: inline-block;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .dropdown-content a {
+                color: brown;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+            .dropdown-content a:hover {background-color: #e5af58;}
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+           .lambo input[type=text] {
+            width: 130px;
+            box-sizing: border-box;
+            border: 2px solid whitesmoke;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            padding: 12px 20px 12px 20px;
+            transition: width 0.4s ease-in-out;
+            margin-left: 2%;
+            font-style: italic;
+        }
+           .lambo input[type=text]:focus {
+            width: 90%;
+        }
+           
+            p1{
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color:  brown;
+            }
+            .sand  {
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                background-color: chocolate;
+                font-size: large;
+                padding: 7px;
+                text-align: justify;
+                border-radius: 10px;
+                margin-left: 3%;
+                margin-right: 3%;
+               }
+               .sand::first-line{
+                color: white;
+               }
+               .sand::first-letter{
+                font-size: 200%;
+                font-variant: small-caps;
+               }
+               .sand::selection{
+                background-color: azure;
+                color: brown;
+               }
+            .act p{
+                display: none;
+                margin-right: 28%;
+                margin-left: 7%;
+                color: rgba(171, 69, 5, 0.897);
+                border-radius: 10px;
+                font-weight: bold;
+                font-size: x-large;
+                text-align: center;
+                padding-top: 13%;
+                height: 20%;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .act:hover p{
+                display: block;
+            }
+            .act img{
+                margin-left: 2%;
+                border-radius: 7%;
+            }
+            .ego{
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-weight: bold;
+                font-size: larger;
+                padding-left: 2%;
+                text-align: justify;
+                
+            }
+            .ego::first-letter{
+                font-size: xx-large;
+                color: rgb(251, 93, 14);
+            }
+            .ego::selection{
+                background-color: azure;
+                color: brown;
+            }
+            .zero{
+                width: 25%;
+                height: 50%;
+            }
+            .zero p{
+                margin-left: 9.5%;
+                text-align: justify;
+                font-family:'Times New Roman', Times, serif;
+                font-variant: small-caps;
+                font-weight: 600;
+            }
+            .zero::first-letter{
+                font-size: xx-large;
+            }
+            .null{
+                margin-left: 28%;
+                margin-top: -22.3%;
+                opacity: 0.8;
+            }
+            .null:hover{
+                opacity: 1;
+            }
+            .hook p{
+                margin-left: 2.2%;
+                text-align: justify;
+                font-family:'Times New Roman', Times, serif;
+                font-variant: small-caps;
+                font-weight: 600;
+                line-height: 130%;
+            }
+            .drop{
+                position: relative;
+                display: inline-block;
+                margin-left: 10%;
+                margin-top: 2%;
+            }
+            .drag {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .drop:hover .drag {
+                display: block;
+                border: 1px solid whitesmoke;
+            }
+            .desc {
+                padding: 15px;
+                text-align: center;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }          
+            .volvo {
+                width: 40%;
+                height: 40%;                
+            }
+            .volvo {
+                margin-left: 55%;
+                text-align: justify;
+                font-family:'Times New Roman', Times, serif;
+                font-variant: small-caps;
+                font-weight: 600;
+                line-height: 130%;
+            }
+            h2 {
+                color: coral;
+                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+                margin-left: 1.7%;
+                font-size: 50;
+                text-decoration:  underline;
+            }
+            .hen img {
+                margin-left: 3%;
+                margin-top: -1%;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            }
+            .hen img:hover {
+                transform: rotate(360deg);
+                transition-timing-function: ease-in-out;
+                transition-duration: 4s;
+            }
+            .hen p {
+                margin-left: 50%;
+                margin-top: -20%;
+                margin-right: 10%;
+                text-align: justify;
+                font-family:'Times New Roman', Times, serif;
+                font-variant: small-caps;
+                font-weight: 600;
+                line-height: 130%;
+            }
+            .loki textarea{
+                width: 100%;
+                height: 200px;
+                padding: 12px 20px;
+                box-sizing: border-box;
+                border: 4px solid #ae7b05;
+                border-radius: 4px;
+                background-color:burlywood;
+                font-size: 16px;
+                resize: none;
+            }
+            .bugati {
+                background-color:rgba(192, 129, 46, 0.866);
+                padding-top: 5%;
+            }
+            
+            
+        </style>
+    </head>
+    <body><br>
+        <div class="psyc">
+            <h1>Welcome...!</h1>
+            <p>A journey is a person in itself; no two are alike. And all plans, safeguards, policing, and coercion are fruitless. We find that after years of struggle that we do not take a trip; a trip takes us.</p>
+            <p1>“Go outside and explore.” – Mahesh</p1>
+        </div><hr><br>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="" class="dropbtn">Explore</a>
+              <div class="dropdown-content">
+                <a href="#">Newyork</a>
+                <a href="#">London</a>
+                <a href="#">Chicago</a>
+                <a href="#">Monaco</a>
+                <a href="#">Eygpt</a>
+              </div>
+            </li>
+            <li><a href="#">Bookings</a></li>
+            <li><a href="#">About</a></li>
+            <li style="float: right; border-left: 1px solid white;"><a class="book" href="http://127.0.0.1:5500/images/destiny.html" title="Sign up">Register</a></li>
+          </ul><br>
+          <form class="lambo">
+            <input type="text" name="search" placeholder="Search..">
+          </form>
+        <div class="sand">
+            Sunset colors are typically more brilliant than sunrise colors, because the evening air contains more particles than morning air.
+            Sometimes just before sunrise or after sunset a green flash can be seen.Some of the most varied colors at sunset can be found in 
+            the opposite or eastern sky after the Sun has set during twilight. Depending on weather conditions and the types of clouds present,
+            these colors have a wide spectrum, and can produce unusual results.Ash from volcanic eruptions, trapped within the troposphere, tends
+            to mute sunset and sunrise colors, while volcanic ejecta that is instead lofted into the stratosphere (as thin clouds of tiny sulfuric
+            acid droplets), can yield beautiful post-sunset colors called afterglows and pre-sunrise glows. A number of eruptions, including those
+            of Mount Pinatubo in 1991 and Krakatoa in 1883, have produced sufficiently high stratus clouds containing sulfuric acid to yield remarkable
+            sunset afterglows (and pre-sunrise glows) around the world. The high altitude clouds serve to reflect strongly reddened sunlight still striking 
+            the stratosphere after sunset, down to the surface.
+        </div><br><br>              
+        <div class="act">
+            <img src="/images/ea5114a8cf9f983fe643ca479890c6f2.jpg" alt="Giraffe" style="float: right; width: 25%; height: 60%;">
+            <p>Tadda!Here I am!</p>
+        </div>
+        <div class="ego">
+            The giraffe is a large African hoofed mammal belonging to the genus Giraffa. It is the tallest living terrestrial animal and the largest ruminant
+            on Earth. Traditionally, giraffes have been thought of as one species, Giraffa camelopardalis, with nine subspecies. Most recently, researchers proposed 
+            dividing them into up to eight extant species due to new research into their mitochondrial and nuclear DNA, and individual species can be distinguished 
+            by their fur coat patterns. Seven other extinct species of Giraffa are known from the fossil record.The giraffe's chief distinguishing characteristics are 
+            its extremely long neck and legs, its horn-like ossicones, and its spotted coat patterns. It is classified under the family Giraffidae, along with its closest 
+            extant relative, the okapi. Its scattered range extends from Chad in the north to South Africa in the south, and from Niger in the west to Somalia in the east.
+            Giraffes usually inhabit savannahs and woodlands. Their food source is leaves, fruits, and flowers of woody plants, primarily acacia species, which they browse 
+            at heights most other herbivores cannot reach.Lions, leopards, spotted hyenas, and African wild dogs may prey upon giraffes. Giraffes live in herds of related 
+            females and their offspring or bachelor herds of unrelated adult males, but are gregarious and may gather in large aggregations. Males establish social hierarchies 
+            through "necking", combat bouts where the neck is used as a weapon. Dominant males gain mating access to females, which bear sole responsibility for rearing the young            
+            The giraffe has intrigued various ancient and modern cultures for its peculiar appearance, and has often been featured in paintings, books, and cartoons. It is classified 
+            by the International Union for Conservation of Nature (IUCN) as vulnerable to extinction and has been extirpated from many parts of its former range. Giraffes are still 
+            found in numerous national parks and game reserves, but estimates as of 2016 indicate there are approximately 97,500 members of Giraffa in the wild. More than 1,600 were 
+            kept in zoos in 2010.
+        </div><br><hr>
+            <div class="zero">
+                <p>The world's largest tree by height is the Hyperion, which is a coastal redwood (Sequoia sempervirens) and is located somewhere in the heart of Redwood National Park 
+                    in California. This should come as no surprise: majestic redwoods are among the tallest and oldest trees on the planet, and their existence dates back a whopping 200 
+                    million years, to the Jurassic period.So, how tall is the tallest tree in the world? The Hyperion reaches a staggering 379.1 feet high! Discovered in 2006 by two 
+                    naturalists and confirmed by redwood expert Stephen Silett, it has quietly grown for an estimated 700-800 years.Access to this tree by recreational hikers, climbers 
+                    and tree enthusiasts has been blocked by the National Park Service, with a hefty $5,000 fine for violators. This is for the protection of the tree itself, and the 
+                    surrounding old growth redwood forest, after visitors were bushwhacking to the remote tree, damaging the understory and leaving trash behind. Park rangers say that
+                    from the ground, the tree doesn't really stand out, because you can only see the first 150ft — but the curiosity is understandable.Just a few hundred feet away from 
+                    this giant is a clearcut from the 1970’s. That means that Hyperion was maybe weeks away from being cut down due to deforestation before the land was protected with 
+                    National Park status by the Carter administration. 
+                </p>
+            </div>
+            <div class="null">
+                <img src="/images/pf-5d9197f3--Hyperion-tree.jpeg" alt="Hyperion" width="1048"  height="585">
+            </div><br>
+            <div class="hook">
+                <p>Hyperion is estimated to be between 600 and 800 years old while the average age of its coast redwood siblings ranges from at least 800 to 1,500 years. It isn't even the 
+                   oldest—that would be a nearby redwood named Gaia that is at least 3,500 years old.In addition, the California redwood holding the title of "world's tallest" has changed 
+                   multiple times in my lifetime, partly because new titleholders emerged as the forest continued to be surveyed. And the title will inevitably be handed off again.Coast 
+                   redwoods reach their maximum height by the time they are 300 to 500 years old, so a younger redwood still experiencing vertical growth will likely take the "world's tallest" 
+                   crown from Hyperion within seven years. Over the course of their very long lives, the trees often lose sections of their crown due to wind and lightning, which also could cost 
+                   Hyperion its record.The habitat surrounding Hyperion has been devastated because no trail leads to it. Still, it would be pointless to devote the millions of dollars necessary 
+                   to build a trail to Hyperion—named after the Greek Titan god of heavenly light—when at any moment its reign could be over.
+                </p>
+            </div><hr><br>
+            <div class="drop">
+                <img src="/images/aesthetic desktop wallpapers.jpeg" alt="anime" width="300" height="150">
+                <div class="drag">
+                <img src="/images/aesthetic desktop wallpapers.jpeg" alt="anime" width="450" height="250">
+                <div class="desc">Beautiful animated picture</div>
+                </div>
+              </div>
+              <p class="volvo">The image captures a serene urban scene on a rainy day, centered around a blue tram numbered 6800. The East Asian architectural influence is evident in the signage 
+                and building styles. People with umbrellas navigate the wet streets, lined with shops and glowing signs, under the fall season’s autumnal trees. Overhead tram wires intersect above, 
+                and the reflections of lights on the wet pavement enhance the atmosphere of the scene, creating a picture of everyday life amidst the rain in an East Asian city.
+              </p><hr>
+              <h2>Fantacy</h2>
+              <div class="hen">
+                <img src="/images/img_forest.jpg" title="Forest" width="600" height="400">
+                <p>The annual net loss of forest area has decreased since 1990, but the world is not on track to meet the target of the United Nations Strategic Plan for Forests to increase forest area 
+                    by 3 percent by 2030.Share of forest area in total land area, top countries (2021) While deforestation is taking place in some areas, new forests are being established through natural 
+                    expansion or deliberate efforts in other areas. As a result, the net loss of forest area is less than the rate of deforestation; and it, too, is decreasing: from 7.8 million hectares 
+                    (19 million acres) per year in the 1990s to 4.7 million hectares (12 million acres) per year during 2010–2020.[35] In absolute terms, the global forest area decreased by 178 million 
+                    hectares (440 million acres; 1,780,000 square kilometres; 690,000 square miles) between 1990 and 2020, which is an area about the size of Libya.</p>
+              </div><br><br><hr>
+              <form class="loki">
+                <textarea placeholder="Feedback of this page..."></textarea>
+              </form>
+              <div class="bugati">
+                <form class="lock" style="margin-left: 300px;" action="self" autocomplete="on">
+                    <label for="fname">Firstname:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="lname">Lastname:</label><br>
+                    <input type="text" id="lname" name="lname"><br>
+                    <label for="mobile">Mobile No:</label><br>
+                    <input type="text" id="mobile" name="mobile" pattern="[0-9]{10}"><br>
+                    <label for="mail">Mail:</label><br>
+                    <input type="email" id="mail" name="mail" placeholder="@gmail.com"><br>
+                    <label for="Gender">Gender:</label><br>
+                    <select id="Gender" name="Gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="others">Others</option>
+                    </select><br><br>
+                    <input type="submit" value="submit">
+                    <input type="reset" value="reset">
+                </form><br>
+            </div>
+
+      
+
+        </body>
+</html>
